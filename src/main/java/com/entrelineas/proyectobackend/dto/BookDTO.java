@@ -1,32 +1,19 @@
-package com.entrelineas.proyectobackend.entity;
+package com.entrelineas.proyectobackend.dto;
 
-import javax.persistence.*;
 
-@Entity
-@Table(name = "books")
-public class Books {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+public class BookDTO {
+
     private String nameB;
     private String category;
     private String fileLocation;
 
-    public Books() {
+    public BookDTO() {
     }
 
-    public Books(String nameB, String category, String fileLocation) {
+    public BookDTO(String nameB, String category, String fileLocation) {
         this.nameB = nameB;
         this.category = category;
         this.fileLocation = fileLocation;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getNameB() {
